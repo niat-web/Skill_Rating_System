@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skill Rating System</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+ </head>
+ <body>
+ 
+
+  <header class="container-fluid bg-primary text-white py-3 text-center">
+  
+   <h1>Skill Rating System</h1>
+   <p>Rate and track your skills for professional growth.</p>
+   <button id="darkModeToggle" class="btn btn-light">
+    <i class="fas fa-moon"></i> Dark Mode
+   </button>
+  </header>
+ 
+
+  <main class="container mt-4">
+  <section id="skillInput" class="mb-4">
+  <h2>Add New Skill</h2>
+  <form id="skillForm">
+  <div class="form-group">
+  <label for="skillName">Skill Name:</label>
+  <input type="text" class="form-control" id="skillName" placeholder="Enter skill name" required>
+  <div class="invalid-feedback">Please enter a skill name.</div>
+  </div>
+  <div class="form-group">
+  <label for="skillCategory">Skill Category:</label>
+  <select class="form-control" id="skillCategory">
+  <option value="webdev">Web Development</option>
+  <option value="design">Design</option>
+  <option value="marketing">Marketing</option>
+  <option value="other">Other</option>
+  </select>
+  </div>
+  <div class="form-group">
+  <label for="skillRating">Skill Rating (1-5):</label>
+  <input type="number" class="form-control" id="skillRating" min="1" max="5" value="3" required>
+  <div class="invalid-feedback">Please enter a rating between 1 and 5.</div>
+  </div>
+  <div class="form-group">
+  <label>Proficiency Level:</label><br>
+  <div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="proficiency" id="beginner" value="beginner" checked>
+  <label class="form-check-label" for="beginner">Beginner</label>
+  </div>
+  <div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="proficiency" id="intermediate" value="intermediate">
+  <label class="form-check-label" for="intermediate">Intermediate</label>
+  </div>
+  <div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="proficiency" id="expert" value="expert">
+  <label class="form-check-label" for="expert">Expert</label>
+  </div>
+  </div>
+  <div class="form-group">
+  <label for="completionDate">Completion Date:</label>
+  <input type="date" class="form-control" id="completionDate">
+  </div>
+  <button type="submit" class="btn btn-primary">Add Skill</button>
+  </form>
+  </section>
+ 
+
+  <section id="skillDisplay" class="mb-4">
+  <h2>My Skills</h2>
+  <div id="skillList" class="row">
+  <!-- Skills will be dynamically added here -->
+  </div>
+  </section>
+ 
+
+  <section id="stats" class="mb-4">
+  <h2>Skill Statistics</h2>
+  <div class="card-deck">
+  <div class="card">
+  <div class="card-body">
+  <h5 class="card-title">Total Skills</h5>
+  <p class="card-text" id="totalSkills">0</p>
+  </div>
+  </div>
+  <div class="card">
+  <div class="card-body">
+  <h5 class="card-title">Average Rating</h5>
+  <p class="card-text" id="averageRating">0</p>
+  </div>
+  </div>
+  </div>
+  </section>
+ 
+
+  <section id="notifications">
+  <!-- Notification messages will appear here -->
+  </section>
+ 
+
+  </main>
+ 
+
+  <footer class="container-fluid bg-dark text-white py-2 text-center">
+  <p>&copy; 2024 Skill Rating System. All rights reserved.</p>
+  <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+  </footer>
+ 
+
+  <script src="script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ </body>
+ </html>
