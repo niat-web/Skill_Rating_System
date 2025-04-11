@@ -1,11 +1,10 @@
-```markdown
 # Skill_Rating_System
 
 ## Objective
 This JavaScript project provides a user interface for tracking and rating skills. It allows users to add skills with names, categories, ratings (1-5), proficiency levels, and completion dates. The application stores skills in local storage, displays them in a list, calculates and displays total skills and average rating, and provides notifications for user actions. The core technologies used are HTML, CSS (implied), and JavaScript for DOM manipulation, event handling, local storage interaction, and basic form validation.
 
 ## Output
-<iframe src="https://github.com/niat-web/Skill_Rating_System" height="1000" width="300" title="Skill_Rating_System"></iframe>
+<iframe src="https://niat-web.github.io/Skill_Rating_System/" height="1000" width="300" title="Skill_Rating_System"></iframe>
 
 ## Project Requirements
 **Technologies:** HTML, CSS, JavaScript
@@ -45,4 +44,3 @@ This JavaScript project provides a user interface for tracking and rating skills
 | API | Endpoint | Description |
 |-----|----------|-------------|
 | Local Storage API | `localStorage.setItem()`, `localStorage.getItem()` | Used to store and retrieve skill data in the browser's local storage. |
-```
